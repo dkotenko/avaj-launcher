@@ -1,9 +1,9 @@
 package com.school21;
 
 public class Coordinates {
-    int longitude;
-    int latitude;
-    int height;
+    private int longitude;
+    private int latitude;
+    private int height;
 
     public Coordinates(int longitude, int latitude, int height) {
         this.longitude = longitude;
