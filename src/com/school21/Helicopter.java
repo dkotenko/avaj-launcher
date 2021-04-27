@@ -11,7 +11,13 @@ public class Helicopter extends Aircraft implements Flyable
 
     public void updateConditions()
     {
-        ;
+        String weather = weatherTower.getWeather(this.coordinates);
+
+        switch (weather)
+        {
+            case "SUN":
+                coordinates.
+        }
     }
 
     public void registerTower(WeatherTower weatherTower)

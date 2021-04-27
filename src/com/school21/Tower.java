@@ -1,6 +1,7 @@
 package com.school21;
 
 import java.util.LinkedList;
+import java.util.logging.Logger;
 
 public abstract class Tower {
     private LinkedList<Flyable> observers;
@@ -17,15 +18,17 @@ public abstract class Tower {
         if (!observers.contains(flyable))
             throw new NotRegisteredException();
         observers.remove(flyable);
+
     }
 
     private Flyable getObserverByInstance(Flyable flyable)
     {
-
+        return flyable;
     }
 
     protected void conditionsChanged()
     {
-
+        for (Flyable observer : observers)
+            observer.updateConditions();
     }
 }
