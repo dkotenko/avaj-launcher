@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -26,14 +27,14 @@ public class DecoderMd5 {
                 .printHexBinary(digest).toUpperCase();
     }
 
-    private static int getDecodedInt(MessageDigest md, String toDecode)
+    private static String getDecodedInt(MessageDigest md, String toDecode)
     {
         for (int i = MIN; i < MAX; i++)
         {
             if (getHash(md, String.valueOf(i)).equals(toDecode))
-                return i;
+                return String.valueOf(i);
         }
-        return 0;
+        return null;
     }
 
     private static String getDecodedType(MessageDigest md, String toDecode)
@@ -62,40 +63,44 @@ public class DecoderMd5 {
         return null;
     }
 
-    private static void decode(File file) throws IOException, NoSuchAlgorithmException
+    public static LinkedList<String> decode(File file) throws IOException, NoSuchAlgorithmException, AvajException
     {
-        int timesNumber;
-        File decoded = new File("decoded_" + file.getName());
+        String timesNumber;
+        LinkedList<String> rows = new LinkedList<String>();
         FileWriter writer = null;
         String algoName = "MD5";
 
         MessageDigest md = MessageDigest.getInstance("MD5");
-        decoded.createNewFile();
 
         Scanner scanner = new Scanner(file);
-        writer = new FileWriter(decoded);
         /*
             first row
          */
         if (!scanner.hasNextLine())
-            throw ScenarioFileIsEmpty();
+            throw new ScenarioFileIsEmpty();
        timesNumber = getDecodedInt(md, scanner.nextLine());
-        if (timesNumber == 0)
-            throw InvalidSimulationTimesNumber();
+        if (timesNumber.isEmpty())
+            throw new InvalidSimulationTimesNumber();
+        rows.add(timesNumber);
         /*
             aircraft rows
          */
         while (scanner.hasNextLine())
         {
             String[] splitted = scanner.nextLine().split(" ");
-
-            createAircraft(splitted);
+            if (splitted.length != 5)
+                throw new InvalidNumberOfAircraftParams();
+            splitted[0] = getDecodedType(md, splitted[0]);
+            splitted[1] = getDecodedId(md, splitted[1]);
+            splitted[2] = getDecodedInt(md, splitted[2]);
+            splitted[3] = getDecodedInt(md, splitted[3]);
+            splitted[4] = getDecodedInt(md, splitted[4]);
+            for (int i = 1; i < 5; i++)
+            {
+                splitted[0] += " " + splitted[i];
+            }
+            rows.add(splitted[0]);
         }
-
-
-
-        writer.write("Hello user3821496\n"); //just an example how you can write a String to it
-        writer.flush();
-        writer.close();
+        return (rows);
     }
 }

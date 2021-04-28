@@ -1,22 +1,16 @@
 package com.school21;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.security.MessageDigest;
 public class Parser {
 
+    private static int timesNumber;
 
-
-    public static void parse(File file, boolean md5mode)
+    public static int getTimesNumber()
     {
-        if (md5mode)
-        {
-            file = DecoderMd5.decode(file);
-            if (file == null)
-                return ;
-
-        }
-
+        return timesNumber;
+    }
+    public static void parse(File file)
+    {
 
     }
 }

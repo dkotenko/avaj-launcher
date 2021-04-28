@@ -23,8 +23,7 @@ public class JetPlane extends Aircraft implements Flyable {
                 coordinates.setHeight(coordinates.getHeight() - 7);
         }
         if (coordinates.getHeight() == 0)
-
-
+            weatherTower.unregister(this);
     }
 
 
