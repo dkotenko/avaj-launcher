@@ -25,10 +25,14 @@ public class Coordinates {
 
     public void setLongitude(int longitude) {
         this.longitude = longitude;
+        if (this.longitude < 1)
+            this.longitude = 1;
     }
 
     public void setLatitude(int latitude) {
         this.latitude = latitude;
+        if (this.latitude < 1)
+            this.latitude = 1;
     }
 
     public void setHeight(int height) {

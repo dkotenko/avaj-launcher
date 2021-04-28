@@ -1,7 +1,7 @@
 package com.school21;
 
 public enum AircraftTypes {
-    BALLON("Ballon"),
+    BALOON("Baloon"),
     HELICOPTER("Helicopter"),
     JETPLANE("JetPlane");
 

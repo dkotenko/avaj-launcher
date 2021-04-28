@@ -1,9 +1,6 @@
 package com.school21;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.LinkedList;
 import java.util.Locale;
@@ -64,6 +61,7 @@ public class Main {
     public static void main(String[] args) {
         boolean md5mode = isMd5Mode(args);
         File file = getFileObj(args, md5mode);
+        MessageWriter.create();
 
         if (md5mode)
         {
@@ -73,7 +71,7 @@ public class Main {
             }
             catch (IOException e)
             {
-                System.out.println("Cant open file " + file.getName());
+                System.out.println("Can't open file " + file.getName());
             }
             catch (NoSuchAlgorithmException ee)
             {
@@ -84,17 +82,27 @@ public class Main {
                 System.out.println(eee.getMessage());
             }
         }
-        Parser.parse(file);
-        int timesNumber = Parser.getTimesNumber();
+
         WeatherTower weatherTower = new WeatherTower();
-        for (int i = 0; i < timesNumber; i++)
+
+        try
         {
-            weatherTower.conditionsChanged();
+            Parser.parse(file, weatherTower);
+            /*
+            run
+            */
+            weatherTower.changeWeatherTimes();
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("Can'' find file scenario.txt");
+        }
+        catch (ScenarioValidationException ee)
+        {
+            System.out.println(ee.getMessage());
         }
 
-        weatherTower.conditionsChanged();
 
-
-
+        MessageWriter.close();
     }
 }

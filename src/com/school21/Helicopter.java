@@ -18,12 +18,20 @@ public class Helicopter extends Aircraft implements Flyable
             case "SUN":
                 coordinates.setHeight(coordinates.getHeight() + 2);
                 coordinates.setLongitude(coordinates.getLongitude() + 10);
+                sendMessage("This is hot.", this);
+                break;
             case "RAIN":
                 coordinates.setLongitude(coordinates.getLongitude() + 5);
+                sendMessage("No water can stop the attack helicopter", this);
+                break;
             case "FOG":
                 coordinates.setLongitude(coordinates.getLongitude() + 1);
+                sendMessage("Is some Somebody smokes here.", this);
+                break;
             case "SNOW":
                 coordinates.setHeight(coordinates.getHeight() - 12);
+                sendMessage("My rotor is going to freeze!", this);
+                break;
         }
         if (coordinates.getHeight() == 0)
             weatherTower.unregister(this);

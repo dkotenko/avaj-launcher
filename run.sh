@@ -7,4 +7,4 @@ find . -name '*.java' > sources.txt
 javac -d . @sources.txt
 
 # run
-java -classpath ./src avajLauncher.AvajLauncher $1
+java com.school21.Main $1 md5

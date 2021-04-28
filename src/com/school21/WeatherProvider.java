@@ -1,12 +1,10 @@
 package com.school21;
 
 public class WeatherProvider {
-    private static WeatherProvider weatherProvider;
+    private static WeatherProvider weatherProvider = new WeatherProvider();
     private static final String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};
 
-    public WeatherProvider(WeatherProvider weatherProvider) {
-        this.weatherProvider = weatherProvider;
-    }
+    public WeatherProvider() {}
 
     public static WeatherProvider getProvider() {
         return weatherProvider;

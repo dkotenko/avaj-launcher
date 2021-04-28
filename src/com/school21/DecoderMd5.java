@@ -47,7 +47,7 @@ public class DecoderMd5 {
         return null;
     }
 
-    private static String getDecodedId(MessageDigest md, String toDecode)
+    private static String getDecodedName(MessageDigest md, String toDecode)
     {
         String currentIdHash;
 
@@ -60,27 +60,26 @@ public class DecoderMd5 {
                     return currentIdHash;
             }
         }
-        return null;
+        return toDecode;
     }
 
     public static LinkedList<String> decode(File file) throws IOException, NoSuchAlgorithmException, AvajException
     {
         String timesNumber;
         LinkedList<String> rows = new LinkedList<String>();
-        FileWriter writer = null;
         String algoName = "MD5";
 
-        MessageDigest md = MessageDigest.getInstance("MD5");
+        MessageDigest md = MessageDigest.getInstance(algoName);
 
         Scanner scanner = new Scanner(file);
         /*
             first row
          */
         if (!scanner.hasNextLine())
-            throw new ScenarioFileIsEmpty();
+            throw new ScenarioValidationException("Scenario file is empty");
        timesNumber = getDecodedInt(md, scanner.nextLine());
-        if (timesNumber.isEmpty())
-            throw new InvalidSimulationTimesNumber();
+        if (timesNumber == null)
+            throw new ScenarioValidationException("Invalid simulations times number");
         rows.add(timesNumber);
         /*
             aircraft rows
@@ -89,9 +88,9 @@ public class DecoderMd5 {
         {
             String[] splitted = scanner.nextLine().split(" ");
             if (splitted.length != 5)
-                throw new InvalidNumberOfAircraftParams();
+                throw new ScenarioValidationException("Invalid number of aircraft params");
             splitted[0] = getDecodedType(md, splitted[0]);
-            splitted[1] = getDecodedId(md, splitted[1]);
+            splitted[1] = getDecodedName(md, splitted[1]);
             splitted[2] = getDecodedInt(md, splitted[2]);
             splitted[3] = getDecodedInt(md, splitted[3]);
             splitted[4] = getDecodedInt(md, splitted[4]);
