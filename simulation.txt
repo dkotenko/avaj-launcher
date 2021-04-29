@@ -1,0 +1,189 @@
+Tower says: Baloon#B1(1) registered to weather tower.
+Tower says: Baloon#B2(2) registered to weather tower.
+Tower says: JetPlane#J1(3) registered to weather tower.
+Tower says: Helicopter#H1(4) registered to weather tower.
+Tower says: Helicopter#H2(5) registered to weather tower.
+Tower says: Helicopter#H3(6) registered to weather tower.
+Tower says: Baloon#B3(7) registered to weather tower.
+Tower says: JetPlane#J2(8) registered to weather tower.
+Tower says: Helicopter#H4(9) registered to weather tower.
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): Good weather to fly away.
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Let's enjoy the good weather and take some pics.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): Good weather to fly away.
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Let's enjoy the good weather and take some pics.
+JetPlane#J2(8): It's raining. Better watch out for lightings.
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): It's raining. Better watch out for lightings.
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): Good weather to fly away.
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): Good weather to fly away.
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Let's enjoy the good weather and take some pics.
+JetPlane#J2(8): It's raining. Better watch out for lightings.
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): OMG! Winter is coming!
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): OMG! Winter is coming!
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): Good weather to fly away.
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): OMG! Winter is coming!
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): Good weather to fly away.
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): OMG! Winter is coming!
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): Good weather to fly away.
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Let's enjoy the good weather and take some pics.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): Who is smoking in here?
+Baloon#B1(1): Damn you fog! I can't see anything.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): Good weather to fly away.
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Let's enjoy the good weather and take some pics.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): Good weather to fly away.
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Let's enjoy the good weather and take some pics.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): This is hot.
+Helicopter#H3(6): Who is smoking in here?
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): OMG! Winter is coming!
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): Who is smoking in here?
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Let's enjoy the good weather and take some pics.
+JetPlane#J2(8): OMG! Winter is coming!
+Helicopter#H4(9): This is hot.
+Baloon#B1(1): Let's enjoy the good weather and take some pics.
+Baloon#B2(2): Damn you fog! I can't see anything.
+JetPlane#J1(3): I am the Hedgehog in the fog!
+Helicopter#H1(4): This is hot.
+Helicopter#H2(5): Who is smoking in here?
+Helicopter#H3(6): This is hot.
+Baloon#B3(7): Damn you fog! I can't see anything.
+JetPlane#J2(8): OMG! Winter is coming!
+Helicopter#H4(9): Who is smoking in here?

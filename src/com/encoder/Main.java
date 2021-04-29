@@ -1,6 +1,5 @@
 package com.encoder;
 
-import javax.xml.bind.DatatypeConverter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -10,6 +9,16 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 public class Main {
+    private static final char[] HEX_DIGITS = "0123456789ABCDEF".toCharArray();
+
+    public static String toHex(byte[] data) {
+        char[] chars = new char[data.length * 2];
+        for (int i = 0; i < data.length; i++) {
+            chars[i * 2] = HEX_DIGITS[(data[i] >> 4) & 0xf];
+            chars[i * 2 + 1] = HEX_DIGITS[data[i] & 0xf];
+        }
+        return new String(chars);
+    }
 
     private static String getHash(MessageDigest md, String strToHash)
     {
@@ -17,8 +26,7 @@ public class Main {
 
         md.update(strToHash.getBytes(StandardCharsets.UTF_8));
         digest = md.digest();
-        return DatatypeConverter
-                .printHexBinary(digest).toUpperCase();
+        return toHex(digest);
     }
 
     private static void exitErrorProgram(String message)
