@@ -1,15 +1,12 @@
 package com.school21;
 
-import javax.xml.bind.DatatypeConverter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 public class DecoderMd5 {
@@ -17,14 +14,23 @@ public class DecoderMd5 {
     private static final int MIN = 1;
     private static final int MAX = 10000;
 
+    private static final char[] HEX_DIGITS = "0123456789ABCDEF".toCharArray();
+
+    public static String toHex(byte[] data) {
+        char[] chars = new char[data.length * 2];
+        for (int i = 0; i < data.length; i++) {
+            chars[i * 2] = HEX_DIGITS[(data[i] >> 4) & 0xf];
+            chars[i * 2 + 1] = HEX_DIGITS[data[i] & 0xf];
+        }
+        return new String(chars);
+    }
+
     private static String getHash(MessageDigest md, String strToHash)
     {
-        byte[] digest;
-
         md.update(strToHash.getBytes(StandardCharsets.UTF_8));
-        digest = md.digest();
-        return DatatypeConverter
-                .printHexBinary(digest).toUpperCase();
+        byte[] digest = md.digest();
+
+        return  toHex(digest);
     }
 
     private static String getDecodedInt(MessageDigest md, String toDecode)
@@ -57,6 +63,7 @@ public class DecoderMd5 {
             {
                 String currentId = type.toString().charAt(0) + String.valueOf(i);
                 currentIdHash = getHash(md, currentId);
+                //System.out.println(currentIdHash + ' ' + currentId);
                 if (currentIdHash.equals(toDecode))
                     return currentId;
             }
