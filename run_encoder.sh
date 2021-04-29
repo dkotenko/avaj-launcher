@@ -7,4 +7,4 @@ find . -name '*.java' > sources.txt
 javac -d . @sources.txt
 
 # run
-java com.school21.Main $1 -md5
+java com.encoder.Main $1

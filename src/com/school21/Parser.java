@@ -24,7 +24,8 @@ public class Parser {
             throw new ScenarioValidationException("Scenario file is empty");
         try
         {
-            timesNumber = Integer.parseInt(scanner.nextLine());
+            String scanned = scanner.nextLine();
+            timesNumber = Integer.parseInt(scanned);
             if (timesNumber < 1)
                 throw new ScenarioValidationException("Simulation times number is not positive");
             weatherTower.setTimesNumber(timesNumber);

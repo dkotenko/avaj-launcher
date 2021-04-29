@@ -10,24 +10,7 @@ public class Main {
 
     private static boolean isMd5arg(String arg)
     {
-        return arg.toLowerCase(Locale.ROOT).equals("md5");
-    }
-
-    private static void writeToFile(LinkedList<String> rows, String fileName)
-    {
-        try
-        {
-            FileWriter writer = new FileWriter(fileName);
-            for(String str: rows) {
-                writer.write(str + System.lineSeparator());
-            }
-            writer.flush();
-            writer.close();
-        }
-        catch (IOException e)
-        {
-            System.out.println("Cannot create file " + fileName);
-        }
+        return arg.toLowerCase(Locale.ROOT).equals("-md5");
     }
 
     private static boolean isMd5Mode(String[] args)
@@ -42,6 +25,32 @@ public class Main {
         }
         return md5mode;
     }
+
+    private static void exitErrorProgram(String message)
+    {
+        System.out.println("Error: " + message);
+        System.exit(0);
+    }
+    
+    
+
+    private static void writeToFile(LinkedList<String> rows, String fileName)
+    {
+        try
+        {
+            FileWriter writer = new FileWriter(fileName);
+            for(String str: rows) {
+                writer.write(str + System.lineSeparator());
+            }
+            writer.flush();
+            writer.close();
+        }
+        catch (IOException e)
+        {
+            exitErrorProgram("Cannot create file " + fileName);
+        }
+    }
+
 
     private static File getFileObj(String[] args, boolean md5mode)
     {
@@ -59,27 +68,45 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+        if (args.length == 0 || args.length > 2)
+        {
+            System.out.println("Usage: path-to-file [-md5]");
+            System.exit(0);
+        }
+
         boolean md5mode = isMd5Mode(args);
+        if (md5mode && args.length == 1)
+            exitErrorProgram("Usage error: path-to-file argument not provided");
+        else if (!md5mode && args.length > 1)
+            exitErrorProgram("Invalid argument provided");
+
         File file = getFileObj(args, md5mode);
         MessageWriter.create();
-
         if (md5mode)
         {
             try {
                 LinkedList<String> decoded = DecoderMd5.decode(file);
-                writeToFile(decoded, "decoded_" + file.getName());
+
+                for (String a : decoded)
+                {
+                    System.out.println(a);
+                }
+                String decodedFileName = "decoded_" + file.getName();
+                writeToFile(decoded, decodedFileName);
+                file = new File(decodedFileName);
             }
             catch (IOException e)
             {
-                System.out.println("Can't open file " + file.getName());
+                exitErrorProgram(String.format("Can't open file '%s'", file.getName()));
             }
             catch (NoSuchAlgorithmException ee)
             {
-                System.out.println("No algorithm MD5 " + file.getName());
+                exitErrorProgram("Internal error: no MD5 algorithm provided");
             }
             catch (AvajException eee)
             {
-                System.out.println(eee.getMessage());
+                exitErrorProgram(eee.getMessage());
             }
         }
 
@@ -95,11 +122,11 @@ public class Main {
         }
         catch (FileNotFoundException e)
         {
-            System.out.println("Can'' find file scenario.txt");
+            exitErrorProgram(String.format("Can't find file '%s'", file.getName()));
         }
         catch (ScenarioValidationException ee)
         {
-            System.out.println(ee.getMessage());
+            exitErrorProgram(ee.getMessage());
         }
 
 

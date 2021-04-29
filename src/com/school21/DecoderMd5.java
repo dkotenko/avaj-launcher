@@ -55,9 +55,10 @@ public class DecoderMd5 {
         {
             for (AircraftTypes type : AircraftTypes.values())
             {
-                currentIdHash = getHash(md, type.toString() + String.valueOf(i));
+                String currentId = type.toString().charAt(0) + String.valueOf(i);
+                currentIdHash = getHash(md, currentId);
                 if (currentIdHash.equals(toDecode))
-                    return currentIdHash;
+                    return currentId;
             }
         }
         return toDecode;
