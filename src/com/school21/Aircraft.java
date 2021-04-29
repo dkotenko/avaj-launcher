@@ -17,7 +17,7 @@ abstract public class Aircraft {
         this.landed = landed;
     }
 
-    public Aircraft(String name, Coordinates coordinates) {
+    protected Aircraft(String name, Coordinates coordinates) {
         this.name = name;
         this.coordinates = coordinates;
         id = nextId();

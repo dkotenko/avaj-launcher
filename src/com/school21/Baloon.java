@@ -19,7 +19,7 @@ public class Baloon extends Aircraft implements Flyable {
                 sendMessage("Let's enjoy the good weather and take some pics.", this);
                 break;
             case "RAIN":
-                coordinates.setHeight(coordinates.getHeight() + 5);
+                coordinates.setHeight(coordinates.getHeight() - 5);
                 sendMessage("Damn you rain! You messed up my baloon.", this);
                 break;
             case "FOG":

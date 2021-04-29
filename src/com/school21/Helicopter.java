@@ -4,7 +4,7 @@ public class Helicopter extends Aircraft implements Flyable
 {
     private WeatherTower weatherTower;
 
-    protected Helicopter (String name, Coordinates coordinates)
+    Helicopter (String name, Coordinates coordinates)
     {
         super(name, coordinates);
     }
@@ -26,7 +26,7 @@ public class Helicopter extends Aircraft implements Flyable
                 break;
             case "FOG":
                 coordinates.setLongitude(coordinates.getLongitude() + 1);
-                sendMessage("Is some Somebody smokes here.", this);
+                sendMessage("Who is smoking in here?", this);
                 break;
             case "SNOW":
                 coordinates.setHeight(coordinates.getHeight() - 12);

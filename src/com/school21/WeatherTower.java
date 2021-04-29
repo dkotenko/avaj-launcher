@@ -11,12 +11,12 @@ public class WeatherTower extends Tower {
         return weather;
     }
 
-    private void changeWeather()
+    void changeWeather()
     {
         conditionsChanged();
     }
 
-    public void changeWeatherTimes()
+    void changeWeatherTimes()
     {
         for (int i = 0; i < timesNumber; i++)
         {

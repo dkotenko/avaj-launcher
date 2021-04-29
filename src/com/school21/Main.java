@@ -87,11 +87,6 @@ public class Main {
         {
             try {
                 LinkedList<String> decoded = DecoderMd5.decode(file);
-
-                for (String a : decoded)
-                {
-                    System.out.println(a);
-                }
                 String decodedFileName = "decoded_" + file.getName();
                 writeToFile(decoded, decodedFileName);
                 file = new File(decodedFileName);
